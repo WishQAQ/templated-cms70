@@ -1,0 +1,101 @@
+<!-- banner -->
+
+<div class="child_top">
+  <div class="sear_b">
+    <div class="head">
+      <div class="title_b">
+        <div class="a">产品中心</div>
+        <div class="b">PRODUCT CENTER</div>
+      </div>
+      <!-- search -->
+      <div class="search">
+        <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+          <input type="hidden" name="kwtype" value="0" />
+          <div class="s_c">
+            <input type="text" name="q" id="q" value="" class="search_text" placeholder="请输入关键词！" />
+          </div>
+          <input type="submit" name="submit" id="" value=" " class="search_submit" />
+        </form>
+      </div>
+      <!-- search end -->
+      <div class="phone_b">
+        <div>
+          <div class="top_msg">SERVICE PHONE</div>
+          <div class="num">+86-4000-99877</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    var atmdateC = [{"is_url":"0","url_controller":"","url_action":"","url_para":"","pic_path":"\/skin\/images\/banner1.jpg","title":"banner","href":"","url":"\/skin\/images\/banner1.jpg"}];
+    $(document).ready(function(){
+        var bannerShow = new Atm();
+        bannerShow.randomPic(atmdateC,".child_top","1600","330");
+    });
+</script> 
+<!-- banner --> 
+
+<!-- 图标导航 --> 
+
+<!-- 图标导航 end-->
+<div class="main_c">
+<div class="main" id="content">
+<!-- 左侧部分 -->
+<div class="sp_left" id="contentLeft"> 
+  <!-- nav -->
+  <div class="sub_nav sub_common">
+    <div class="con1-left"> <a href="javascript:;" title="" class="class_up"></a>
+      <div class="con1_class product">
+        <ul id="left-type" class="lnavb ">
+          {dede:channel type='son' typeid='3' currentstyle="
+          <li><a href='~typelink~' class='on'>~typename~</a></li>
+          "}
+          <li><a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a></li>
+          {/dede:channel}
+        </ul>
+      </div>
+      <a href="javascript:;" title="" class="class_down"></a> </div>
+  </div>
+  <div class="sub_common">
+    <div class="c_title">
+      <h2>最新资讯</h2>
+      <span>INFORMATION</span> </div>
+    <div class="syl_list sub_common_padding">
+      <ul>
+        {dede:arclist typeid='2' row='5' titlelen='50' orderby='pubdate'}
+        <li> <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a> </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+  
+  <!-- 优惠活动 end--> 
+  <!-- 联系我们 -->
+  <div class="sub_content sub_common">
+    <div class="contact_title">
+      <h2>咨询热线</h2>
+      <span>+86-0000-96877</span> </div>
+    <div class="sub_content_list sub_common_padding"> 地址：广东省广州市番禺区工业开发区 <br />
+      电话：+86-0000-99877 <br />
+      传真：+86-0000-98877 <br />
+      邮箱：admin@dedecms.com <br />
+    </div>
+    <script type="text/javascript" src="/skin/js/map.js"></script>
+    <div id="leftmap" class="" style="width:225px; height:150px;"></div>
+    <script type="text/javascript">
+		
+			$(function(){
+                var map = new BMap.Map("leftmap");
+				var myIcon = new BMap.Icon("/skin/images/tubiao_03.png", new BMap.Size(14,19));
+                map.centerAndZoom(new BMap.Point(125.330767,43.914504), 17);
+                var marker1 = new BMap.Marker(new BMap.Point(125.330767,43.914504),{icon:myIcon});  // 创建标注
+                map.addOverlay(marker1);              // 将标注添加到地图中
+                marker1.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+			});
+		
+        </script> 
+  </div>
+</div>
+<!-- 左侧部分 end--> 
+<!-- 内容部分 -->

@@ -1,0 +1,33 @@
+<div class="thead">
+  <div class="w_980"> <span class="title">关键词：</span> <span>这里是您的关键词</span> </div>
+</div>
+</div>
+<div class="header"> 
+  <!-- 顶部 -->
+  <div class="h_top_c">
+    <div class="h_top">
+      <div class="logo"> <a href="/" title="这里是您的公司名称"> <img src="/skin/images/logo.jpg" alt="{dede:global.cfg_webname/}" /> </a> </div>
+      <div class="tel_index_top">
+        <div class="top_msg">SERVICE PHONE</div>
+        <div class="num">+86-4000-99877</div>
+      </div>
+      <div class="c"></div>
+    </div>
+  </div>
+  <!-- 顶部 end--> 
+  <!-- 导航 -->
+  <div class="nav_c">
+    <div class="zz_nav"></div>
+    <div class="nav">
+      <ul>
+        <li {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='on' ":@me="";{/dede:field}> <a href="/">网站首页</a> </li>
+        {dede:channelartlist typeid='top' currentstyle='on'}
+        <li class="{dede:field.currentstyle/}"> <a href="{dede:field name='typeurl'/}" title="{dede:field name='typename'/}">{dede:field name='typename'/}</a>
+          <div class="nav_dd dn"> {dede:channel type='son' noself='yes'} <a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a> {/dede:channel} </div>
+        </li>
+        {/dede:channelartlist}
+      </ul>
+    </div>
+  </div>
+  <!-- 导航 end--> 
+</div>
